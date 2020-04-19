@@ -1,0 +1,22 @@
+{
+  "name": "cpuse",
+  "version": "1.0.0",
+  "description": "CPU usage",
+  "main": "cpuse.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Er2ch/cpuse.git"
+  },
+  "keywords": [
+    "CPU",
+    "usage",
+    "Er2",
+    "Ertu"
+  ],
+  "author": "Er2",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Er2ch/cpuse/issues"
+  },
+  "homepage": "https://github.com/Er2ch/cpuse#readme"
+}
