@@ -1,8 +1,8 @@
 # cpuse
 
-## CPU Usage
+CPU Usage
 
-##Usage
+Usage:
 
 ```js
 const cpuse = require('cpuse')
@@ -15,7 +15,7 @@ cpuse.usage(/* you can use here callback */)
 cpuse.usageAvg().then(/* also */)
 ```
 
-##Example
+Example:
 
 ```js
 const cpuse = require('cpuse')

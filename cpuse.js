@@ -12,7 +12,7 @@ await sleep()
 t = this.getCPUtimes()
 d = [f, s, t]
 for(let i=0;i<f.length;i++) {
-let fi = f[i].idle, ft = this.total(f[i]), si = s[i]?s[i].idle:0, st = s[i]?this.total(s[i]):0, ti = t[i]?t[i].idle:0, tt = t[i]?this.total(t[i]):0,
+let fi = f[i]?f[i].idle:0, ft = f[i]?this.total(f[i]):0, si = s[i]?s[i].idle:0, st = s[i]?this.total(s[i]):0, ti = t[i]?t[i].idle:0, tt = t[i]?this.total(t[i]):0,
 fu = 1-(si-fi)/(st-ft), su = 1-(ti-si)/(tt-st),
 pu = (fu+su)/2*100
 usages.push(pu.toFixed(1))}
