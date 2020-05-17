@@ -1,7 +1,7 @@
 class CPUse {
 constructor(){
 this.os = require('os')
-Math.avg = arr => {arr = arr.filter(i => parseInt(i)).map(i => parseInt(i)); return arr.reduce((a,b)=>a+b)/arr.length}
+Math.avg = arr => {arr = arr.filter(i => parseInt(i)).map(i => parseInt(i)); return arr.length>1?arr.reduce((a,b)=>a+b)/arr.length:0}
 }
 usage = async cb => {
 let f = this.getCPUtimes(), s, t, d, usages = []
@@ -21,6 +21,6 @@ else return new Promise(r => r(usages))
 }
 usageAvg = async() => Math.avg(await this.usage()).toFixed(1)+'%'
 getCPUtimes = () => this.os.cpus().map(i => i.times)
-total = data => Object.values(data).reduce((a, b)=>a+b)
+total = data => data.length>1?Object.values(data).reduce((a, b)=>a+b, 0):0
 }
 module.exports = new CPUse()
